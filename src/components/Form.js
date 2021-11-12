@@ -25,7 +25,7 @@ const Form = (props) => {
                 <label>Name: </label>
                 <input 
                     type="text"
-                    id="input-input"
+                    id="name-input"
                     name="name"
                     value={order.name}
                     onChange={onChange}
