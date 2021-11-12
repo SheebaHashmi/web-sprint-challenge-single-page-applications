@@ -12,7 +12,39 @@ code {
     monospace;
 }
 body{
-  background: coral ;
   font-family:'Nunito', sans-serif;
-  text-align: center;
+  color:black;
+  /* font-size: 3rem; */
+}
+.home{
+  display: flex;
+  justify-content: space-between;
+  margin:5% 10%;
+}
+.home-content{
+  margin:4%;
+  font-size: 2rem;
+}
+img{
+ width: 60%;
+}
+#order-pizza{
+  background-color: rgb(174, 151, 248);
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 4%;
+  color: white;
+  font-size: 1.5rem;
+}
+#order-pizza:hover{
+  background-color: rgb(159, 132, 250);
+}
+#pizza-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(207, 193, 250);
+  color: white;
+  margin:2% 15%;
 }

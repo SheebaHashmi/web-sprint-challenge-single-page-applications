@@ -20,8 +20,8 @@ const Form = (props) => {
   return (
       <div>
           <BackHome/>
-          <h2>Please enter your information:</h2>
             <form id="pizza-form" onSubmit={onSubmit}>
+                <h2>Please enter your information:</h2>
                 <label>Name: </label>
                 <input 
                     type="text"

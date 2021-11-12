@@ -35,8 +35,16 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question.
 
 1. In 1-2 sentences, explain what React's `useRouteMatch` hook is used for.
+
+Ans: useRouteMatch hook is used to write resuable and code when using react router. It provides a path and url variable which can be used to create route and link an element to a specific location.
+
 1. How would you explain form validation to someone who has never programmed before?
+
+Ans:Validation is a method to check whether the user is providing the desired inputs or not. 
+
 1. In 1-2 sentences, define end to end testing.
+
+Ans: End to end testing is a way to check the entire application's behaviour, to make sure that it is according to the expectations/specification or not.
 
 ## Instructions
 
@@ -52,10 +60,10 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 Your finished project must include all of the following requirements:
 
-- [ *] A homepage that has a "/" route and links to your form (button, nav bar, or any other type of link is acceptable but must have an id of "order-pizza")
-- [* ] A order form that has a "/pizza" route and shows the form
-- [* ] A form with an id of "pizza-form"
-- [ *] A name text input field with an id of "name-input"
+- [ ] A homepage that has a "/" route and links to your form (button, nav bar, or any other type of link is acceptable but must have an id of "order-pizza")
+- [ ] A order form that has a "/pizza" route and shows the form
+- [ ] A form with an id of "pizza-form"
+- [ ] A name text input field with an id of "name-input"
 - [ ] Validation for name and the error message is "name must be at least 2 characters" (Use this exact error message to make sure tests pass) ::: VERY IMPORTANT TO USE THAT EXACT ERROR MESSAGE (casing included!)
 - [ ] A dropdown for pizza size with an id of "size-dropdown"
 - [ ] A checklist for toppings - at least 4 (hint: name each separately!)
