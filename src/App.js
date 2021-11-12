@@ -3,9 +3,11 @@ import { Route,Switch } from 'react-router-dom';
 import Form from './components/Form';
 import * as yup from 'yup';
 import HomePage from "./components/HomePage";
+import OrderPage from "./components/OrderPage";
 import schema from "./validation/formSchema"
+import axios from "axios";
 
-const initalData = {
+const initialData = {
   name: "",
   size: "",
   pepperoni: false,
@@ -17,7 +19,7 @@ const initalData = {
 }
 const initialDisabled = true;
 const App = () => {
-  const [order, setOrder] = useState(initalData);
+  const [order, setOrder] = useState(initialData);
   const [disabled, setDisabled] = useState(initialDisabled);
   const [formError, setFormError] = useState({name:""})
 
@@ -25,18 +27,14 @@ const App = () => {
     validate(inputName,inputValue)
     setOrder({...order,[inputName]:inputValue})
   }
-  const submitOrder = () => {
-    const newOrder = {
-      name: order.name,
-      size: order.size,
-      pepperoni: order.pepperoni,
-      mushroom: order.mushroom,
-      cheese: order.cheese,
-      onion: order.onion,
-      olives: order.olives,
-      special: order.special,
-    }
-    postNewOrder(newOrder)
+
+  const submitOrder = (order) => {
+    axios.post('http://localhost:3000/order',order)
+      .then((res)=>{
+        setOrder([res.data,...order])
+      })
+      .catch(err => console.log(err))
+      .finally(setOrder(initialData))
   }
   const validate = (name,value) => {
     yup.reach(schema,name).validate(value)
@@ -60,9 +58,13 @@ const App = () => {
         />
       </Route>
 
+      <Route path='/order'>
+        <OrderPage userOrder={order}/>
+      </Route>
       <Route path='/'>
         <HomePage/>
       </Route>
+
       </Switch>
 
     </div>

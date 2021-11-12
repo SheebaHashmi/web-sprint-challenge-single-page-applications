@@ -1,5 +1,6 @@
 import React from "react";
 import BackHome from "./BackHome";
+import {useHistory,Link} from 'react-router-dom'
 const Form = (props) => {
     const { order,update,submit,disabled,error } = props
 
@@ -12,7 +13,10 @@ const Form = (props) => {
         event.preventDefault();
         submit();
     }
-
+    const history = useHistory();
+    const toOrder = () => {
+        history.push('/order')
+    }
   return (
       <div>
           <BackHome/>
@@ -28,12 +32,12 @@ const Form = (props) => {
                 />
                 <div className="error">{error.name}</div>
                 <label>Pizza Size </label>
-                <select id="size-dropdown">
-                    <option vlaue="">--Slicing Chart--</option>
-                    <option value="1">Slice</option>
-                    <option value="2">Medium</option>
-                    <option value="3">Large</option>
-                    <option value="4">Giant</option>
+                <select id="size-dropdown" name="size" onChange={onChange}>
+                    <option value="">--Slicing Chart--</option>
+                    <option value="slice">Slice</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                    <option value="giant">Giant</option>
                 </select>
                 <label>Choose your topping:</label>
                 <label>Pepperoni</label>
@@ -79,8 +83,11 @@ const Form = (props) => {
                     value={order.special}
                     onChange={onChange}
                 />
+                <Link to={`/order`}>
+                <button id="order-button" disabled={disabled} onClick={toOrder}>Add to Order</button>
+                </Link>
+               
 
-                <button id="order-button" disabled={disabled}>Add to Order</button>
             </form>
       </div>
   );
