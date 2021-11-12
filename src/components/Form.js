@@ -43,36 +43,36 @@ const Form = (props) => {
                 <label>Pepperoni</label>
                 <input
                     type="checkbox"
-                    name="pepperoni"
-                    checked={order.pepperoni}
+                    name="topping1"
+                    checked={order.topping1}
                     onChange={onChange}       
                 />
                 <label>Mushroom</label>
                 <input
                     type="checkbox"
-                    name="mushroom"
-                    checked={order.mushroom}
+                    name="topping2"
+                    checked={order.topping2}
                     onChange={onChange}  
                 />
                 <label>Extra Cheese</label>
                 <input
                     type="checkbox"
-                    name="cheese"
-                    checked={order.cheese}
+                    name="topping3"
+                    checked={order.topping3}
                     onChange={onChange}   
                 />
                 <label>Onion</label>
                 <input
                     type="checkbox"
-                    name="onion"
-                    checked={order.onion}
+                    name="topping4"
+                    checked={order.topping4}
                     onChange={onChange}  
                 />
                 <label>Black Olives</label>
                 <input
                     type="checkbox"
-                    name="olives"
-                    checked={order.olives}
+                    name="topping5"
+                    checked={order.topping5}
                     onChange={onChange}  
                 />
                 <label>Special Instructions</label>

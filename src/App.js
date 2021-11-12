@@ -10,11 +10,11 @@ import axios from "axios";
 const initialData = {
   name: "",
   size: "",
-  pepperoni: false,
-  mushroom: false,
-  cheese: false,
-  onion: false,
-  olives: false,
+  topping1: false,
+  topping2: false,
+  topping3: false,
+  topping4: false,
+  topping5: false,
   special: "",
 }
 const initialDisabled = true;
