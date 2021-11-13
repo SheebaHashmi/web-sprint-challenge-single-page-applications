@@ -18,8 +18,8 @@ const Form = (props) => {
         history.push('/order')
     }
   return (
-      <div>
-          <BackHome/>
+      <div className="form-page">
+          <BackHome className="home-button"/>
             <form id="pizza-form" onSubmit={onSubmit}>
                 <h2>Please enter your information:</h2>
                 <label>Name: </label>
@@ -34,12 +34,13 @@ const Form = (props) => {
                 <label>Pizza Size </label>
                 <select id="size-dropdown" name="size" onChange={onChange}>
                     <option value="">--Slicing Chart--</option>
-                    <option value="slice">Slice</option>
-                    <option value="medium">Medium</option>
-                    <option value="large">Large</option>
-                    <option value="giant">Giant</option>
+                    <option value="Slice">Slice</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                    <option value="Giant">Giant</option>
                 </select>
                 <label>Choose your topping:</label>
+                <div className="toppings">
                 <label>Pepperoni</label>
                 <input
                     type="checkbox"
@@ -75,6 +76,7 @@ const Form = (props) => {
                     checked={order.topping5}
                     onChange={onChange}  
                 />
+                </div>
                 <label>Special Instructions</label>
                 <input
                     type="text"
@@ -82,13 +84,14 @@ const Form = (props) => {
                     name="special"
                     value={order.special}
                     onChange={onChange}
-                />
+                /><br/>
                 <Link to={`/order`}>
                 <button id="order-button" disabled={disabled} onClick={toOrder}>Add to Order</button>
                 </Link>
                
 
             </form>
+            <img src ="https://cdn.dribbble.com/users/1322388/screenshots/13377076/media/ad59e958501ebf7c06c066f8164a1d99.jpg?compress=1&resize=1600x1200"/>
       </div>
   );
 };
