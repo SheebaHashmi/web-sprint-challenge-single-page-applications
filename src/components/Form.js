@@ -18,9 +18,9 @@ const Form = (props) => {
         history.push('/order')
     }
   return (
-      <div className="form-page">
-          <BackHome className="home-button"/>
-            <form id="pizza-form" onSubmit={onSubmit}>
+      <div className="container">
+        <form className="content" onSubmit={onSubmit}>
+          <BackHome id="button"/>
                 <h2>Please enter your information:</h2>
                 <label>Name: </label>
                 <input 
@@ -86,12 +86,10 @@ const Form = (props) => {
                     onChange={onChange}
                 /><br/>
                 <Link to={`/order`}>
-                <button id="order-button" disabled={disabled} onClick={toOrder}>Add to Order</button>
+                <button id="button" disabled={disabled} onClick={toOrder}>Add to Order</button>
                 </Link>
                
-
             </form>
-            <img src ="https://cdn.dribbble.com/users/1322388/screenshots/13377076/media/ad59e958501ebf7c06c066f8164a1d99.jpg?compress=1&resize=1600x1200"/>
       </div>
   );
 };

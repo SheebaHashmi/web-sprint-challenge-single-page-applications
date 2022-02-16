@@ -36,7 +36,7 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 1. In 1-2 sentences, explain what React's `useRouteMatch` hook is used for.
 
-Ans: useRouteMatch hook is used to write resuable and code when using react router. It provides a path and url variable which can be used to create route and link an element to a specific location.
+Ans: useRouteMatch hook is used to write reuseable and efficient code when using react router. It provides a path and url variable which can be used to create route and link an element to a specific location.
 
 1. How would you explain form validation to someone who has never programmed before?
 
