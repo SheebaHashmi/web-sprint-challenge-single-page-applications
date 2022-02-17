@@ -20,7 +20,7 @@ const Form = (props) => {
   return (
       <div className="container">
         <form className="content" onSubmit={onSubmit}>
-          <BackHome id="button"/>
+          <BackHome className="home-button"/>
                 <h2>Please enter your information:</h2>
                 <label>Name: </label>
                 <input 
@@ -41,44 +41,49 @@ const Form = (props) => {
                 </select>
                 <label>Choose your topping:</label>
                 <div className="toppings">
-                <label>Pepperoni</label>
+                <label>Pepperoni
                 <input
                     type="checkbox"
                     name="topping1"
                     checked={order.topping1}
                     onChange={onChange}       
                 />
-                <label>Mushroom</label>
+                </label>
+                <label>Mushroom
                 <input
                     type="checkbox"
                     name="topping2"
                     checked={order.topping2}
                     onChange={onChange}  
                 />
-                <label>Extra Cheese</label>
+                </label>
+                <label>Extra Cheese
                 <input
                     type="checkbox"
                     name="topping3"
                     checked={order.topping3}
                     onChange={onChange}   
                 />
-                <label>Onion</label>
+                </label>
+                <label>Onion
                 <input
                     type="checkbox"
                     name="topping4"
                     checked={order.topping4}
                     onChange={onChange}  
                 />
-                <label>Black Olives</label>
+                </label>
+                <label>Black Olives
                 <input
                     type="checkbox"
                     name="topping5"
                     checked={order.topping5}
                     onChange={onChange}  
                 />
+                </label>
                 </div>
                 <label>Special Instructions</label>
-                <input
+                <textarea
                     type="text"
                     id="special-text"
                     name="special"
