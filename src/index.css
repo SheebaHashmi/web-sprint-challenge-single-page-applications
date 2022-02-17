@@ -49,7 +49,7 @@ textarea{
   height: 9rem;
   padding:1% 2%;
 }
-#button{
+button{
   background-color: rgb(174, 151, 248);
   border: 1px solid white;
   border-radius: 10px;
@@ -57,7 +57,7 @@ textarea{
   padding: 4%;
   font-size: 1.5rem;
 }
-#button:hover{
+button:hover{
   background-color: rgb(142, 111, 246);
 }
 .home-button{
@@ -76,11 +76,12 @@ textarea{
 
 @media only screen and (max-width:767px)  {
   .container{
-   margin:2% 8%;
-   padding: 2%;
+  margin:2% 8%;
+  padding: 2%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  font-size: 1.5rem;
   }
   .container img{
     width: 90%;

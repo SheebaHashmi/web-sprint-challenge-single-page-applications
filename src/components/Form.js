@@ -21,7 +21,7 @@ const Form = (props) => {
       <div className="container">
         <form className="content" onSubmit={onSubmit}>
           <BackHome className="home-button"/>
-                <h2>Please enter your information:</h2>
+                <h3>Please enter your information:</h3>
                 <label>Name: </label>
                 <input 
                     type="text"
@@ -39,7 +39,7 @@ const Form = (props) => {
                     <option value="Large">Large</option>
                     <option value="Giant">Giant</option>
                 </select>
-                <label>Choose your topping:</label>
+                <label>Choose your toppings:</label>
                 <div className="toppings">
                 <label>Pepperoni
                 <input
@@ -83,7 +83,7 @@ const Form = (props) => {
                 </label>
                 </div>
                 <label>Special Instructions</label>
-                <textarea
+                <input
                     type="text"
                     id="special-text"
                     name="special"
@@ -91,7 +91,7 @@ const Form = (props) => {
                     onChange={onChange}
                 /><br/>
                 <Link to={`/order`}>
-                <button id="button" disabled={disabled} onClick={toOrder}>Add to Order</button>
+                <button id="order-button" disabled={disabled} onClick={toOrder}>Add to Order</button>
                 </Link>
                
             </form>

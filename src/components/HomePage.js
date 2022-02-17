@@ -8,7 +8,7 @@ export default function HomePage(){
             <h1>Lambda Eats</h1>
             <p>Hungry?</p>
             <Link to= {`/pizza`}>
-                <button id="button">Order a Pizza!</button>
+                <button id="order-pizza">Order a Pizza!</button>
             </Link>
 
             </div>
